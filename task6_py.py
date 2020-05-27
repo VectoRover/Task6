@@ -1,6 +1,10 @@
 import os
 path_to_file = "F:/prog/input.txt"
-file = open(path_to_file, "r")
+try:
+    file = open(path_to_file, "r")
+except Exception:
+    print("the file is missing")
+
 
 try:
     if os.stat(path_to_file).st_size > 0:
